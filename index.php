@@ -1,8 +1,10 @@
 <?php
-if (isset($_SESSION['id_user'])) {
+if (isset($_SESSION['id'])) {
     session_destroy();
 } else {
     session_start();
+    $csrfToken = bin2hex(random_bytes(32)); // Gere um token CSRF
+    $_SESSION['csrf_token'] = $csrfToken; // Armazene o token na sessão
 }
 ini_set('default_charset', 'UTF-8');
 header("Cache-Control: no-cache, must-revalidate");
@@ -29,21 +31,24 @@ header("Cache-Control: no-cache, must-revalidate");
                 <h4 id="homeTitle">Painel do Professor</h4>
                 <form id="login-form" action="manager/login.php" method="post" role="form" style="display: block;">
                     <div class="form-floating mt-3" style="color: gray;">
-                        <input type="text" class="form-control" id="usuario" placeholder="Usuário" name="user" required maxlength="14">
+                        <input type="text" class="form-control" id="usuario" placeholder="Usuário" name="user" required maxlength="50">
                         <label for="usuario">Usuário</label>
                     </div>
                     <div class="form-floating mt-3" style="color: gray;">
                         <input type="password" class="form-control" id="senha" placeholder="Senha" name="password" required>
                         <label for="senha">Senha</label>
                     </div>
+                    <input type="hidden" name="csrf_token" value="<?php echo $csrfToken; ?>">
+
                     <button class="btn btn-lg btn-outline-primary mt-3 w-100" type="submit" id="login-button">Login</button>
                 </form><!-- FIM login-form-->
             </div><!-- FIM itensContent-->
         </div><!-- FIM content-->
     </div><!-- FIM container-->
 </body>
+
 <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="js/frameworks/jquery.min.js"></script>
 <script src="js/frameworks/html5shiv_3.7.3.min.js"></script>
-<script src="js/paginas/index.js"></script>
+<script src="js/pages/index.js"></script>
 </html>
