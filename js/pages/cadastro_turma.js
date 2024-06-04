@@ -56,4 +56,23 @@ $(document).ready(function () {
     },
     order: [[1, 'asc']],
   });
+
+  $(document).ready(function() {
+    let turma = document.getElementById('descr_turma');
+    let botao = document.getElementById('cadastroBt');
+
+    function toggleButton() {
+        if (turma.value !== '') {
+            botao.disabled = false;
+        } else {
+            botao.disabled = true;
+        }
+    }
+
+    // Inicialmente verifica o valor do campo
+    toggleButton();
+
+    // Adiciona o evento onchange ao campo de entrada
+    turma.onchange = toggleButton;
+});
   
