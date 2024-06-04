@@ -1,17 +1,5 @@
-<?php
-session_start();
-header("Cache-Control: no-cache, must-revalidate");
-include('manager/conexao.php');
-if ($_SESSION['logado'] !== true ) {
-
-    //redireciona para a index.
-    header('Location: index.php');
-    session_destroy();
-    exit();
-} 
-?>
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,7 +8,7 @@ if ($_SESSION['logado'] !== true ) {
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/home.css">
     <link rel="shortcut icon" href="images/favicon.ico" />
-    <title>Document</title>
+    <title>Relatório Geral</title>
 </head>
 <body>
     <?php include('nav.php');?>

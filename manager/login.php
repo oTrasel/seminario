@@ -19,6 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     $_SESSION['id'] = $resultado['id'];
                     $_SESSION['nome'] = $resultado['nome'];
                     $_SESSION['login'] = $resultado['login'];
+                    $_SESSION['logado'] = true;
                     echo 'sucesso';
 
                 }else{
