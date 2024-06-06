@@ -29,6 +29,10 @@ header("Cache-Control: no-cache, must-revalidate");
                         <li>
                             <hr class="dropdown-divider">
                         </li>
+                        <li><a class="dropdown-item <?php echo (basename($_SERVER['PHP_SELF']) == 'vinculo.php') ? 'active' : ''; ?>" href="vinculo.php">vinculo Aluno -> Turma </a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
                         <li><a class="dropdown-item <?php echo (basename($_SERVER['PHP_SELF']) == 'notas.php') ? 'active' : ''; ?>" href="notas.php">Lançar Notas</a></li>
                         <li>
                             <hr class="dropdown-divider">
@@ -42,7 +46,7 @@ header("Cache-Control: no-cache, must-revalidate");
         </div>
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a href="/rastreamentos/seguranca/manager/logout.php" class="nav-link" style="text-decoration: none;">
+                <a href="manager/logout.php" class="nav-link" style="text-decoration: none;">
                     <button class="btn btn-outline-primary">Logout</button>
                 </a>
             </li>
