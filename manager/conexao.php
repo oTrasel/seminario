@@ -2,7 +2,7 @@
 
 $ip = 'localhost';
 $user = 'root';
-$nome = 'seminario';
+$nome = 'seminario2';
 $senha = '';
 
 // Cria a string de conexão com o MySQL

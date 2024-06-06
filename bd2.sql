@@ -20,7 +20,7 @@ CREATE TABLE aluno
 ( 
  id INT PRIMARY KEY AUTO_INCREMENT,  
  nome VARCHAR(300) NOT NULL,  
- dt_nascimento DATETIME NOT NULL,  
+ dt_nascimento DATE NOT NULL,  
  dt_cadastro DATETIME NOT NULL  
 ); 
 

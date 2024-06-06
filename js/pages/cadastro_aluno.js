@@ -1,11 +1,11 @@
 $(document).ready(function () {
-    $('#cadastro_turma').submit(function (event) {
+    $('#cadastro_aluno').submit(function (event) {
       event.preventDefault();
   
       // Desabilita o botão de login e atualiza o texto e o estilo
-      var cadastroTurma = $('#cadastroBt');
-      cadastroTurma.prop('disabled', true);
-      cadastroTurma.html(`
+      var cadastroAluno = $('#cadastroBt');
+      cadastroAluno.prop('disabled', true);
+      cadastroAluno.html(`
         <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
         <span role="status">Cadastrando</span>
       `);
@@ -20,23 +20,23 @@ $(document).ready(function () {
           // Verifica o conteúdo da resposta do servidor
           response = response.trim();
           if (response === 'sucesso') {
-            alert('Turma cadastrada com Sucesso!');
+            alert('Aluno cadastrado com Sucesso!');
             location.reload();
           } else {
-            alert('Houve um erro ao cadastrar a Turma, por favor, tente novamente!');
+            alert('Houve um erro ao cadastrar o Aluno, por favor, tente novamente!');
             location.reload();
           }
   
           // Reabilita o botão de login e restaura o texto e o estilo originais
-          cadastroTurma.prop('disabled', false);
-          cadastroTurma.html('Cadastrar');
+          cadastroAluno.prop('disabled', false);
+          cadastroAluno.html('Cadastrar');
         },
         error: function (xhr, status, error) {
-            alert('Houve um erro ao cadastrar a Turma, por favor, tente novamente!');
+            alert('Houve um erro ao cadastrar o Aluno, por favor, tente novamente!');
   
           // Reabilita o botão de login e restaura o texto e o estilo originais
-          cadastroTurma.prop('disabled', false);
-          cadastroTurma.html('Cadastrar');
+          cadastroAluno.prop('disabled', false);
+          cadastroAluno.html('Cadastrar');
         }
       });
     });

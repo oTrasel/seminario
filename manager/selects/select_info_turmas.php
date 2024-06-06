@@ -2,7 +2,7 @@
 include('manager/conexao.php');
 
 try {
-    $stmt = $pdo->prepare("select t.id, t.descr_turma, p.nome, count(a.nome) as 'alunos'  from turma t 
+    $stmt = $pdo->prepare("select t.id, t.descr_turma, p.nome, count(a.nome) as 'alunos', DATE_FORMAT(t.dt_abertura, '%d/%m/%Y %H:%i') as dt_abertura from turma t 
     join professor p 
     on p.id = t.id_professor 
     left join aluno a 

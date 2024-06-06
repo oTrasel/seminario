@@ -41,7 +41,7 @@ if ($_SESSION['logado'] !== true) {
                         <input type="text" class="form-control" id="descr_turma" placeholder="Descrição da Turma" name="turma" required>
                         <label for="descr_turma">Descrição da Turma</label>
                     </div>
-                    <button class="btn btn-lg btn-outline-primary mt-1 w-100 " type="submit" id="cadastroBt" disabled>Cadastrar</button>
+                    <button class="btn btn-lg btn-outline-primary mt-1 w-100 " type="submit" id="cadastroBt">Cadastrar</button>
                 </form><!-- FIM login-form-->
             </div><!-- FIM itensContent-->
             <hr style="border: solid 1px black;">
@@ -64,10 +64,10 @@ if ($_SESSION['logado'] !== true) {
                         <table class="table table-striped" id="tableInfos">
                             <thead class="thead-dark">
                                 <tr>
-                                    <th scope="col" id="tableHead">ID</th>
                                     <th scope="col" id="tableHead">Descrição Da Turma</th>
                                     <th scope="col" id="tableHead">Professor Da Turma</th>
                                     <th scope="col" id="tableHead">Quantiadade de Alunos</th>
+                                    <th scope="col" id="tableHead">Data de Abertura</th>
                                 </tr>
                             </thead>
                             <tbody id="conteudo">
@@ -76,10 +76,10 @@ if ($_SESSION['logado'] !== true) {
                                     foreach ($info as $infos) {
                                         echo '
                                     <tr>
-                                        <td id="row" > ' . $infos['id'] . '</td>
                                         <td id="row" > ' . $infos['descr_turma'] . '</td>
                                         <td id="row" > ' . $infos['nome'] . '</td>
                                         <td id="row" > ' . $infos['alunos'] . '</td>
+                                        <td id="row" > ' . $infos['dt_abertura'] . '</td>
 
                                     </tr>';
                                     }
