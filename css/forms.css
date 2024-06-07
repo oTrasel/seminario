@@ -13,6 +13,9 @@ body {
     align-items: center;
     padding: 2%;
 }
+.select2{
+    max-width: 100%;
+}
 
 #content {
     background-color: #212529;
