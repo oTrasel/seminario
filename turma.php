@@ -68,6 +68,7 @@ if ($_SESSION['logado'] !== true) {
                                     <th scope="col" id="tableHead">Professor Da Turma</th>
                                     <th scope="col" id="tableHead">Quantiadade de Alunos</th>
                                     <th scope="col" id="tableHead">Data de Abertura</th>
+                                    <th scope="col" id="tableHead">Turma Fechada</th>
                                 </tr>
                             </thead>
                             <tbody id="conteudo">
@@ -80,6 +81,7 @@ if ($_SESSION['logado'] !== true) {
                                         <td id="row" > ' . $infos['nome'] . '</td>
                                         <td id="row" > ' . $infos['alunos'] . '</td>
                                         <td id="row" > ' . $infos['dt_abertura'] . '</td>
+                                        <td id="row" > ' . $infos['fechada'] . '</td>
 
                                     </tr>';
                                     }
