@@ -42,6 +42,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         } else {
             echo '<tr><td id="row">Nenhuma nota encontrada.</td>
             <td id="row"><i class="bi bi-exclamation-diamond-fill" color="red"></i></td>
+            <td id="row"><i class="bi bi-exclamation-diamond-fill" color="red"></i></td>
+            <td id="row"><i class="bi bi-exclamation-diamond-fill" color="red"></i></td>
+            <td id="row"><i class="bi bi-exclamation-diamond-fill" color="red"></i></td>
+            <td id="row"><i class="bi bi-exclamation-diamond-fill" color="red"></i></td>
                 </tr>';
         }
     } catch (PDOException $e) {
