@@ -16,6 +16,7 @@ try {
     on p.id = t.id_professor 
     join vinculo_turma_aluno vta 
     on vta.id_turma = t.id 
+    where t.dt_fechamento is not null 
     group by t.id, t.descr_turma, p.nome");
     $stmt->execute();
     $row = $stmt->rowCount();

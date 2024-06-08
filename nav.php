@@ -14,7 +14,7 @@ header("Cache-Control: no-cache, must-revalidate");
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
                 <li class="nav-item">
-                    <a class="nav-link <?php echo (basename($_SERVER['PHP_SELF']) == 'home.php') ? 'active' : ''; ?>" aria-current="page" href="/rastreamentos/seguranca/home.php">Visão Geral</a>
+                    <a class="nav-link <?php echo (basename($_SERVER['PHP_SELF']) == 'home.php') ? 'active' : ''; ?>" aria-current="page" href="home.php">Visão Geral</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="navbarDropdownAdmin" role="button" data-bs-toggle="dropdown" aria-expanded="false">
