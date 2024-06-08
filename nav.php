@@ -37,8 +37,12 @@ header("Cache-Control: no-cache, must-revalidate");
                         <li>
                             <hr class="dropdown-divider">
                         </li>
+                        <li><a class="dropdown-item <?php echo (basename($_SERVER['PHP_SELF']) == 'fechar.php') ? 'active' : ''; ?>" href="fechar.php">Fechar Turmas</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
                         <li><a class="dropdown-item <?php echo (basename($_SERVER['PHP_SELF']) == 'relatorio.php') ? 'active' : ''; ?>" href="relatorio.php">Relatório</a></li>
-                        
+
                 </li>
 
 
