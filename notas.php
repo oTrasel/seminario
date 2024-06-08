@@ -27,7 +27,7 @@ if ($_SESSION['logado'] !== true) {
     <script src="js/frameworks/popper.min.js"></script>
     <script src="js/frameworks/select2.min.js"></script>
     <link rel="shortcut icon" href="images/favicon.ico" />
-    <title>Cadastro de Vinculos</title>
+    <title>Lançar Notas</title>
 </head>
 
 <body>
@@ -93,19 +93,19 @@ if ($_SESSION['logado'] !== true) {
                 <div class="modal-body">
                     <form id="editarForm" action="manager/cadastros/cadastro_nota.php" method="post" role="form" style="display: block;">
                         <div class="form-floating mt-3 mb-3" style="color: gray;">
-                            <input type="number" class="form-control" id="mat" placeholder="Matemática" name="matematica" min="0" max="10" required>
+                            <input type="number" class="form-control" id="mat" placeholder="Matemática" name="matematica" min="0" max="10" required step="0.01">
                             <label for="mat">Matemática</label>
                         </div>
                         <div class="form-floating mt-3 mb-3" style="color: gray;">
-                            <input type="number" class="form-control" id="hist" placeholder="História" name="historia" min="0" max="10" required>
+                            <input type="number" class="form-control" id="hist" placeholder="História" name="historia" min="0" max="10" required step="0.01">
                             <label for="hist">História</label>
                         </div>
                         <div class="form-floating mt-3 mb-3" style="color: gray;">
-                            <input type="number" class="form-control" id="geo" placeholder="Geografia" name="geografia" min="0" max="10" required>
+                            <input type="number" class="form-control" id="geo" placeholder="Geografia" name="geografia" min="0" max="10" required step="0.01">
                             <label for="geo">Geografia</label>
                         </div>
                         <div class="form-floating mt-3 mb-3" style="color: gray;">
-                            <input type="number" class="form-control" id="port" placeholder="Português" name="portugues" min="0" max="10" required>
+                            <input type="number" class="form-control" id="port" placeholder="Português" name="portugues" min="0" max="10" required step="0.01">
                             <label for="port">Português</label>
                         </div>
                         <input type="hidden" id="idVinculo" name="idVinculo">
